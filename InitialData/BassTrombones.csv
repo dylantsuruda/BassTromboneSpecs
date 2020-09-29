@@ -1,0 +1,87 @@
+Brand,Model,Number of valves,Valve configuration,Valve type,Wrap,Bell size (inches),Bell material,Dual bore,Finish,Outer slide material
+Antoine Courtois,AC502B-1-0,Double,Independent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Antoine Courtois,AC502BR-1-0,Double,Independent,Rotary,Open,9.5,Gold brass,Not dual bore,Clear lacquer,Yellow brass
+Antoine Courtois,AC550BH-1-0,Double,Independent,Hagmann,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Antoine Courtois,AC550BHL-1-0,Double,Independent,Hagmann,Open,10.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Antoine Courtois,AC550BHLR-1-0,Double,Independent,Hagmann,Open,10.5,Gold brass,Not dual bore,Clear lacquer,Yellow brass
+Antoine Courtois,AC550BHR-1-0,Double,Independent,Hagmann,Open,9.5,Gold brass,Not dual bore,Clear lacquer,Yellow brass
+Antoine Courtois,AC551BHA-1-0,Double,Independent,Hagmann,Open,9.5,Yellow brass,Dual bore,Clear lacquer,Yellow brass
+Antoine Courtois,AC551BHLA-1-0,Double,Independent,Hagmann,Open,10.5,Yellow brass,Dual bore,Clear lacquer,Yellow brass
+Antoine Courtois,AC551BHLRA-1-0,Double,Independent,Hagmann,Open,10.5,Gold brass,Dual bore,Clear lacquer,Yellow brass
+Antoine Courtois,AC551BHRA-1-0,Double,Independent,Hagmann,Open,9.5,Gold brass,Dual bore,Clear lacquer,Yellow brass
+Bach,50A,Single,Not applicable,Hagmann,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Bach,50A3,Double,Independent,Hagmann,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Bach,50A3L,Double,Independent,Hagmann,Open,10.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Bach,50AF3,Double,Independent,Axial flow,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Bach,50B,Single,Not applicable,Rotary,Closed,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Bach,50B2,Double,Dependent,Rotary,Closed,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Bach,50B2L,Double,Dependent,Rotary,Closed,10.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Bach,50B2LO,Double,Dependent,Rotary,Open,10.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Bach,50B2O,Double,Dependent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Bach,50B3,Double,Independent,Rotary,Closed,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Bach,50B3L,Double,Independent,Rotary,Closed,10.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Bach,50B3LO,Double,Independent,Rotary,Open,10.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Bach,50B3O,Double,Independent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Bach,50BO,Single,Not applicable,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Conn,110H,Single,Not applicable,Rotary,Open,10,Rose brass,Not dual bore,Clear lacquer,Yellow brass
+Conn,110HSP,Single,Not applicable,Rotary,Open,10,Rose brass,Not dual bore,Silver plate,Yellow brass
+Conn,112H,Double,Independent,Rotary,Open,10,Rose brass,Not dual bore,Clear lacquer,Yellow brass
+Conn,112HSP,Double,Independent,Rotary,Open,10,Rose brass,Not dual bore,Silver plate,Yellow brass
+Conn,62H,Double,Dependent,Rotary,Open,9.5,Rose brass,Not dual bore,Clear lacquer,Yellow brass
+Conn,62HCL,Double,Independent,CL2000,Open,9.5,Rose brass,Not dual bore,Clear lacquer,Yellow brass
+Conn,62HI,Double,Independent,Rotary,Open,9.5,Rose brass,Not dual bore,Clear lacquer,Yellow brass
+Conn,62HISP,Double,Independent,Rotary,Open,9.5,Rose brass,Not dual bore,Silver plate,Yellow brass
+Conn,62HSP,Double,Dependent,Rotary,Open,9.5,Rose brass,Not dual bore,Silver plate,Yellow brass
+Eastman,ETB848,Double,Independent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Eastman,ETB848G,Double,Independent,Rotary,Open,9.5,Gold brass,Not dual bore,Clear lacquer,Yellow brass
+Getzen,1052FD,Double,Independent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Getzen,1052FD (Silver Plate),Double,Independent,Rotary,Open,9.5,Yellow brass,Not dual bore,Silver plate,Yellow brass
+Getzen,1052FDR,Double,Independent,Rotary,Open,9.5,Red brass,Not dual bore,Clear lacquer,Yellow brass
+Getzen,1052FDR (Silver Plate),Double,Independent,Rotary,Open,9.5,Red brass,Not dual bore,Silver plate,Yellow brass
+Getzen,1062FD,Double,Dependent,Rotary,Open,9.5,Yellow brass,Dual bore,Clear lacquer,Yellow brass
+Getzen,1062FD (Silver Plate),Double,Dependent,Rotary,Open,9.5,Yellow brass,Dual bore,Silver plate,Yellow brass
+Getzen,1062FDR,Double,Dependent,Rotary,Open,9.5,Red brass,Dual bore,Clear lacquer,Yellow brass
+Getzen,1062FDR (Silver Plate),Double,Dependent,Rotary,Open,9.5,Red brass,Dual bore,Silver plate,Yellow brass
+Getzen,3062AF,Double,Independent,Axial flow,Open,9.5,Yellow brass,Dual bore,Clear lacquer,Yellow brass
+Getzen,3062AF (Silver Plate),Double,Independent,Axial flow,Open,9.5,Yellow brass,Dual bore,Silver plate,Yellow brass
+Getzen,3062AFR,Double,Independent,Axial flow,Open,9.5,Red brass,Dual bore,Clear lacquer,Yellow brass
+Getzen,3062AFR (Silver Plate),Double,Independent,Axial flow,Open,9.5,Red brass,Dual bore,Silver plate,Yellow brass
+Greenhoe,GB5-2G,Double,Dependent,Rotary,Open,9.5,Gold brass,Not dual bore,Clear lacquer,Yellow brass
+Greenhoe,GB5-2G (Gold Brass Outer Slide),Double,Dependent,Rotary,Open,9.5,Gold brass,Not dual bore,Clear lacquer,Gold brass
+Greenhoe,GB5-2G (Nickel Silver Outer Slide),Double,Dependent,Rotary,Open,9.5,Gold brass,Not dual bore,Clear lacquer,Nickel silver
+Greenhoe,GB5-2Y,Double,Dependent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Greenhoe,GB5-2Y (Gold Brass Outer Slide),Double,Dependent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Gold brass
+Greenhoe,GB5-2Y (Nickel Silver Outer Slide),Double,Dependent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Nickel silver
+Greenhoe,GB5-3G,Double,Independent,Rotary,Open,9.5,Gold brass,Not dual bore,Clear lacquer,Yellow brass
+Greenhoe,GB5-3G (Gold Brass Outer Slide),Double,Independent,Rotary,Open,9.5,Gold brass,Not dual bore,Clear lacquer,Gold brass
+Greenhoe,GB5-3G (Nickel Silver Outer Slide),Double,Independent,Rotary,Open,9.5,Gold brass,Not dual bore,Clear lacquer,Nickel silver
+Greenhoe,GB5-3Y,Double,Independent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Greenhoe,GB5-3Y (Gold Brass Outer Slide),Double,Independent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Gold brass
+Greenhoe,GB5-3Y (Nickel Silver Outer Slide),Double,Independent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Nickel silver
+Greenhoe,GC5-2R,Double,Dependent,Rotary,Open,9.5,Red brass,Not dual bore,Clear lacquer,Rose brass
+Greenhoe,GC5-2R-TIS,Double,Dependent,Rotary,Open,9.5,Red brass,Not dual bore,Clear lacquer,Rose brass
+Greenhoe,GC5-2Y,Double,Dependent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Rose brass
+Greenhoe,GC5-2Y-TIS,Double,Dependent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Rose brass
+Greenhoe,GC5-3R,Double,Independent,Rotary,Open,9.5,Red brass,Not dual bore,Clear lacquer,Rose brass
+Greenhoe,GC5-3R-TIS,Double,Independent,Rotary,Open,9.5,Red brass,Not dual bore,Clear lacquer,Rose brass
+Greenhoe,GC5-3Y,Double,Independent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Rose brass
+Greenhoe,GC5-3Y-TIS,Double,Independent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Rose brass
+Holton,TR181,Double,Independent,Rotary,Closed,10,Rose brass,Not dual bore,Clear lacquer,Nickel silver
+Holton,TR181S,Double,Independent,Rotary,Closed,10,Rose brass,Not dual bore,Silver plate,Nickel silver
+Holton,TR183,Single,Not applicable,Rotary,Closed,9,Rose brass,Not dual bore,Clear lacquer,Nickel silver
+Holton,TR183S,Single,Not applicable,Rotary,Closed,9,Rose brass,Not dual bore,Silver plate,Nickel silver
+Shires,TBQ36GA,Double,Independent,Axial flow,Open,9.5,Gold brass,Not dual bore,Clear lacquer,Yellow brass
+Shires,TBQ36GR,Double,Independent,Rotary,Open,9.5,Gold brass,Not dual bore,Clear lacquer,Yellow brass
+Shires,TBQ36YA,Double,Independent,Axial flow,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Shires,TBQ36YR,Double,Independent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+XO,XO1240L,Double,Independent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+XO,XO1240LT,Double,Independent,Axial flow,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+XO,XO1240RL,Double,Independent,Rotary,Open,9.5,Rose brass,Not dual bore,Clear lacquer,Yellow brass
+XO,XO1240RLT,Double,Independent,Axial flow,Open,9.5,Rose brass,Not dual bore,Clear lacquer,Yellow brass
+XO,XO1242L,Double,Dependent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+XO,XO1242RL,Double,Dependent,Rotary,Open,9.5,Rose brass,Not dual bore,Clear lacquer,Yellow brass
+Yamaha,YBL-421G,Single,Not applicable,Rotary,Closed,9.5,Gold brass,Not dual bore,Clear lacquer,Yellow brass
+Yamaha,YBL-620G,Double,Dependent,Rotary,Closed,9.5,Gold brass,Not dual bore,Clear lacquer,Nickel silver
+Yamaha,YBL-822G,Double,Dependent,Rotary,Closed,9.5,Gold brass,Not dual bore,Clear lacquer,Yellow brass
+Yamaha,YBL-830,Double,Independent,Rotary,Open,9.5,Yellow brass,Not dual bore,Clear lacquer,Yellow brass
+Yamaha,YBL-830 (Gold Brass Bell),Double,Independent,Rotary,Open,9.5,Gold brass,Not dual bore,Clear lacquer,Yellow brass

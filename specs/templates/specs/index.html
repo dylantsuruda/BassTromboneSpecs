@@ -1,0 +1,222 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Filter bass trombones by specifications, or just browse through a table of bass trombone specs.">
+
+    <title>Bass Trombone Specs</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+    <link rel="manifest" href="{% static 'site.webmanifest' %}">
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="{% url 'specs:index' %}">Bass Trombone Specs</a>
+    </nav>
+
+    <main role="main" class="container" style="padding-top: 1.5rem; padding-bottom: 0.5rem;">
+
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}" role="alert">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      <h5>
+        If you want to filter the table, scroll down until you reach the <a href="#filter">filter</a>.
+      </h5>
+      
+      <hr>
+
+      <h4>Table of bass trombone specs</h4>
+      <h6>
+        Showing {% if bass_trombone_result_count != 1 %}{{ bass_trombone_result_count }} entries{% else %}{{ bass_trombone_result_count }} entry{% endif %}
+        {% if bass_trombone_result_count == 0 %}<b>(No trombones match your selected options)</b>{% endif %}
+      </h6>
+
+      <div class="table-responsive" style="overflow-y: auto; height: {% if bass_trombone_result_count <= 3 %}30vh{% elif bass_trombone_result_count <= 6 %}50vh{% elif bass_trombone_result_count <= 10 %}70vh{% else %}90vh{% endif %};">
+        <table class="table table-bordered table-hover table-sm">
+          <thead class="thead-dark" style="position: sticky; top: 0;">
+            <tr>
+              <th style="vertical-align: top; white-space: nowrap;">Brand</th>
+              <th style="vertical-align: top; white-space: nowrap;">Model</th>
+              <th style="vertical-align: top; white-space: nowrap;">Number of valves</th>
+              <th style="vertical-align: top; white-space: nowrap;">Valve configuration</th>
+              <th style="vertical-align: top; white-space: nowrap;">Valve type</th>
+              <th style="vertical-align: top; white-space: nowrap;">Wrap</th>
+              <th style="vertical-align: top; white-space: nowrap;">Bell size (inches)</th>
+              <th style="vertical-align: top; white-space: nowrap;">Bell material</th>
+              <th style="vertical-align: top; white-space: nowrap;">Dual bore</th>
+              <th style="vertical-align: top; white-space: nowrap;">Finish</th>
+              <th style="vertical-align: top; white-space: nowrap;">Outer slide material</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for bass_trombone in bass_trombone_result %}
+            <tr>
+              <td>{{ bass_trombone.brand }}</td>
+              <td>{{ bass_trombone.model }}</td>
+              <td>{{ bass_trombone.number_of_valves }}</td>
+              <td>{{ bass_trombone.valve_configuration }}</td>
+              <td>{{ bass_trombone.valve_type }}</td>
+              <td>{{ bass_trombone.wrap }}</td>
+              <td>{{ bass_trombone.bell_size }}</td>
+              <td>{{ bass_trombone.bell_material }}</td>
+              <td>{{ bass_trombone.dual_bore }}</td>
+              <td>{{ bass_trombone.finish }}</td>
+              <td>{{ bass_trombone.outer_slide_material }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <hr>
+      
+      <a name="filter" style="padding-top: 4rem;">
+        <h4>Filter the table above by selecting specifications</h4>
+      </a>
+      <h6>
+        If you're on a computer, you can hold <i>Ctrl</i> (or <i>Command</i>) while clicking to select multiple options.
+        To deselect an option, hold <i>Ctrl</i> (or <i>Command</i>) while clicking on a selected option.
+        Make sure you click the <i>Filter using your selected options</i> button after you've selected all your options.
+      </h6>
+      <form method="GET" action=".">
+        <div class="form-group">
+          <label for="brandSelect">Brand</label>
+          <select multiple class="custom-select" id="brandSelect" name="brand">
+            {% for brand in brand_all %}
+            <option {% if brand in brand_result %}selected{% endif %}>{{ brand }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="numberOfValvesSelect">Number of valves</label>
+            <select multiple class="form-control" id="numberOfValvesSelect" name="number_of_valves">
+              <option {% if 'Single' in number_of_valves_result %}selected{% endif %}>Single</option>
+              <option {% if 'Double' in number_of_valves_result %}selected{% endif %}>Double</option>
+            </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="valveConfigurationSelect">Valve configuration</label>
+            <select multiple class="form-control" id="valveConfigurationSelect" name="valve_configuration">
+              <option {% if 'Not applicable' in valve_configuration_result %}selected{% endif %}>Not applicable</option>
+              <option {% if 'Dependent' in valve_configuration_result %}selected{% endif %}>Dependent</option>
+              <option {% if 'Independent' in valve_configuration_result %}selected{% endif %}>Independent</option>
+            </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="valveTypeSelect">Valve type</label>
+            <select multiple class="form-control" id="valveTypeSelect" name="valve_type">
+              {% for valve_type in valve_type_all %}
+              <option {% if valve_type in valve_type_result %}selected{% endif %}>{{ valve_type }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="wrapSelect">Wrap</label>
+            <select multiple class="form-control" id="wrapSelect" name="wrap">
+              <option {% if 'Open' in wrap_result %}selected{% endif %}>Open</option>
+              <option {% if 'Closed' in wrap_result %}selected{% endif %}>Closed</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="bellSizeSelect">Bell size (inches)</label>
+            <select multiple class="form-control" id="bellSizeSelect" name="bell_size">
+              {% for bell_size in bell_size_all %}
+              <option {% if bell_size in bell_size_result %}selected{% endif %}>{{ bell_size }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="bellMaterialSelect">Bell material</label>
+            <select multiple class="form-control" id="bellMaterialSelect" name="bell_material">
+              {% for bell_material in bell_material_all %}
+              <option {% if bell_material in bell_material_result %}selected{% endif %}>{{ bell_material }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="dualBoreSelect">Dual bore</label>
+            <select multiple class="form-control" id="dualBoreSelect" name="dual_bore">
+              <option {% if 'Dual bore' in dual_bore_result %}selected{% endif %}>Dual bore</option>
+              <option {% if 'Not dual bore' in dual_bore_result %}selected{% endif %}>Not dual bore</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="finishSelect">Finish</label>
+            <select multiple class="form-control" id="finishSelect" name="finish">
+              {% for finish in finish_all %}
+              <option {% if finish in finish_result %}selected{% endif %}>{{ finish }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="outerSlideMaterialSelect">Outer slide material</label>
+            <select multiple class="form-control" id="outerSlideMaterialSelect" name="outer_slide_material">
+              {% for outer_slide_material in outer_slide_material_all %}
+              <option {% if outer_slide_material in outer_slide_material_result %}selected{% endif %}>{{ outer_slide_material }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-dark btn-block" type="submit">
+          Filter using your selected options
+        </button>
+      </form>
+
+      <hr style="margin-top: 2.5rem; margin-bottom: 1.5rem; border-top: 5px solid rgba(0,0,0,.1)">
+
+      <h4>
+        Customizable bass trombones
+      </h4>
+      <h6>
+        The companies listed below offer custom options with their trombones.
+        If you're looking for a bass trombone with very specific specs, perhaps one of these companies could help you out.
+      </h6>
+      <div class="table-responsive">
+        <table class="table table-bordered table-sm">
+          <tbody>
+            {% for customizable_bass_trombone in customizable_bass_trombones %}
+            <tr>
+              <td>{{ customizable_bass_trombone.bass_trombone }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+
+    <footer class="container">
+      <hr>
+      <p>
+        See something wrong on this page or have a comment? <a href="{% url 'feedback:index' %}">Report an error or leave a comment</a>
+        <br>
+        Want to see the code for this site? <a href="https://github.com/dylantsuruda/BassTromboneSpecs" target="_blank">View code on GitHub</a>
+      </p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
