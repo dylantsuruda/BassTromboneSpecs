@@ -82,12 +82,12 @@ WSGI_APPLICATION = 'BassTromboneSpecs.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'basstrombonespecs',
-        'USER': 'postgres',
-        'PASSWORD': os.environ['DJANGO_DB_PASSWORD'],
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'basstrombonespecs',
+        # 'USER': 'postgres',
+        # 'PASSWORD': os.environ['DJANGO_DB_PASSWORD'],
+        # 'HOST': '127.0.0.1',
+        # 'PORT': '5432',
     }
 }
 
