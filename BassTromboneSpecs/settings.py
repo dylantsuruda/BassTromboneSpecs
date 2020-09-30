@@ -25,10 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ['DJANGO_DEBUG'] == "True"
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    'basstrombonespecs.herokuapp.com',
     '127.0.0.1',
 ]
 
@@ -48,7 +47,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -83,12 +81,13 @@ WSGI_APPLICATION = 'BassTromboneSpecs.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'basstrombonespecs',
-        'USER': 'postgres',
-        'PASSWORD': os.environ['DJANGO_DB_PASSWORD'],
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        # Commented out for deployment
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'basstrombonespecs',
+        # 'USER': 'postgres',
+        # 'PASSWORD': os.environ['DJANGO_DB_PASSWORD'],
+        # 'HOST': '127.0.0.1',
+        # 'PORT': '5432',
     }
 }
 
