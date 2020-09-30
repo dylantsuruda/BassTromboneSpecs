@@ -1,12 +1,12 @@
 # BassTromboneSpecs
-This repository has the code for [basstrombonespecs.com](https://www.basstrombonespecs.com).
+This repository has the code for [www.basstrombonespecs.com](https://www.basstrombonespecs.com).
 
 ---
 
 ## Some info about the code
-basstrombonespecs.com was made using [Django](https://www.djangoproject.com), a Python web framework.
+The website was made using [Django](https://www.djangoproject.com), a Python web framework.
 [Bootstrap](https://getbootstrap.com) was used to style the front-end design.
-The [feedback page](https://www.basstrombonespecs.com/feedback) has reCAPTCHA verification.
+In addition, the [feedback page](https://www.basstrombonespecs.com/feedback) has reCAPTCHA verification.
 
 For the most part, I'd say this is a pretty standard (and simple) Django project -- in other words, if you understand how Django projects are structured, then my code should make sense.
 
