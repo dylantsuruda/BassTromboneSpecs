@@ -139,4 +139,8 @@ STATICFILES_DIRS = (
 SECURE_SSL_REDIRECT = True
 
 
+RECAPTCHA_SITE_KEY = os.environ['RECAPTCHA_SITE_KEY']
+RECAPTCHA_SECRET_KEY = os.environ['RECAPTCHA_SECRET_KEY']
+
+
 django_heroku.settings(locals())

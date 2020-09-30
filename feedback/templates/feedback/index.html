@@ -17,6 +17,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
     <link rel="icon" href="{% static 'favicon.ico' %}">
     <link rel="manifest" href="{% static 'site.webmanifest' %}">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("form").submit();
+      }
+    </script>
+
   </head>
   
   <body>
@@ -29,7 +37,7 @@
       <h4>
         Submit feedback
       </h4>
-      <form method="POST">
+      <form method="POST" id='form'>
         {% csrf_token %}
         <div class="form-group">
           <label for="feedbackTextarea">
@@ -38,7 +46,7 @@
           </label>
           <textarea class="form-control" id="feedbackTextarea" rows="4" name="feedback"></textarea>
         </div>
-        <button class="btn btn-dark" type="submit">
+        <button class="btn btn-dark g-recaptcha" type="submit" data-sitekey="{{ recaptcha_site_key }}" data-callback='onSubmit'>
           Submit
         </button>
       </form>
