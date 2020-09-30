@@ -28,7 +28,7 @@ SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 DEBUG = os.environ['DJANGO_DEBUG'] == "True"
 
 ALLOWED_HOSTS = [
-    'basstrombonespecs.herokuapp.com/',
+    'basstrombonespecs.herokuapp.com',
     '127.0.0.1',
 ]
 
