@@ -81,13 +81,14 @@ WSGI_APPLICATION = 'BassTromboneSpecs.wsgi.application'
 
 DATABASES = {
     'default': {
-        # Commented out for deployment
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'basstrombonespecs',
-        # 'USER': 'postgres',
-        # 'PASSWORD': os.environ['DJANGO_DB_PASSWORD'],
-        # 'HOST': '127.0.0.1',
-        # 'PORT': '5432',
+        # This is the local development database.
+        # django-heroku module takes care of the database in production.
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'basstrombonespecs',
+        'USER': 'postgres',
+        'PASSWORD': os.environ['DJANGO_DB_PASSWORD'],
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
