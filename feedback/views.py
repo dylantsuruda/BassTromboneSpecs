@@ -49,6 +49,7 @@ def index(request):
 
             return redirect('specs:index')
         else:
+            messages.error(request, "Your feedback won't be submitted if it's empty.")
             return render(request, 'feedback/index.html', context)
     else:
         return render(request, 'feedback/index.html', context)

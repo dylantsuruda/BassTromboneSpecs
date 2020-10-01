@@ -47,6 +47,14 @@
     </nav>
 
     <main role="main" class="container" style="padding-top: 1.5rem; padding-bottom: 0.5rem;">
+
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{% if message.tags == "success" %}success{% elif message.tags == "error" %}danger{% endif %}" role="alert">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
       
       <h4>
         Submit feedback
