@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% if not debug %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179436238-1"></script>
     <script>
@@ -11,6 +12,7 @@
 
       gtag('config', 'UA-179436238-1');
     </script>
+    {% endif %}
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,13 +29,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
     <link rel="icon" href="{% static 'favicon.ico' %}">
     <link rel="manifest" href="{% static 'site.webmanifest' %}">
-
+    
+    {% if not debug %}
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       function onSubmit(token) {
         document.getElementById("form").submit();
       }
     </script>
+    {% endif %}
 
   </head>
   
@@ -56,7 +60,7 @@
           </label>
           <textarea class="form-control" id="feedbackTextarea" rows="4" name="feedback"></textarea>
         </div>
-        <button class="btn btn-dark g-recaptcha" type="submit" data-sitekey="{{ recaptcha_site_key }}" data-callback='onSubmit'>
+        <button class="btn btn-dark {% if not debug %}g-recaptcha{% endif %}" type="submit" {% if not debug %}data-sitekey="{{ recaptcha_site_key }}" data-callback='onSubmit'{% endif %}>
           Submit
         </button>
       </form>

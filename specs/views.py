@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.conf import settings
 from django.http import HttpResponsePermanentRedirect
 from .models import Brand
 from .models import ValveType
@@ -194,6 +195,7 @@ def index(request):
     bass_trombone_result_count = bass_trombone_result.count()
 
     context = {
+        'debug': settings.DEBUG,
         'brand_all': brand_all,
         'valve_type_all': valve_type_all,
         'bell_size_all': bell_size_all,
