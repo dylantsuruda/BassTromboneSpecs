@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponsePermanentRedirect
 from .models import Brand
 from .models import ValveType
 from .models import BellSize
@@ -11,6 +12,9 @@ from .models import CustomizableBassTrombone
 # Create your views here.
 
 def index(request):
+    if request.get_host() == "basstrombonespecs.herokuapp.com":
+        return HttpResponsePermanentRedirect('https://www.basstrombonespecs.com')
+
     # These are the selections the user inputted on the site.
     brand_selection = request.GET.getlist('brand')
     number_of_valves_selection = request.GET.getlist('number_of_valves')

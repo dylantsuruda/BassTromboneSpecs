@@ -1,12 +1,16 @@
 from django.shortcuts import render, redirect
 from django.conf import settings
 from django.contrib import messages
+from django.http import HttpResponsePermanentRedirect
 from .models import Feedback
 import requests
 
 # Create your views here.
 
 def index(request):
+    if request.get_host() == "basstrombonespecs.herokuapp.com":
+        return HttpResponsePermanentRedirect('https://www.basstrombonespecs.com')
+
     context = {'recaptcha_site_key': settings.RECAPTCHA_SITE_KEY}
     if request.method == "POST":
         feedback = request.POST['feedback']
