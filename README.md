@@ -1,6 +1,8 @@
 # BassTromboneSpecs
 This repository has the code for [www.basstrombonespecs.com](https://www.basstrombonespecs.com).
 
+***Note: Going to www.basstrombonespecs.com no longer takes you to the application -- Heroku has discontinued their free tier and so the application is no longer deployed.***
+
 ---
 
 ### Why I made [www.basstrombonespecs.com](https://www.basstrombonespecs.com)
